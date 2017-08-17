@@ -6,24 +6,34 @@
 <p>How many bright minds are in class today?</p>
 
 <form method = "post" action = "names" id = "text_box">
-    <input type ="number" min = 2 autofocus = "autofocus" id ="myInput" oninput = "myFunction()" >
+    <input type ="button" value="Press for boxes!" name ="classname" onclick="generate()">
     <p id = "demo"></p>
     <br>
     <br>
     <input type = "submit">
 </form></center>
 
+
+
+
+
+
+
+
+
+
 <script>
     function myFunction() {
-        var x = document.getElementById("myInput").value;
-        var y = "";
+        var x = 1 //document.getElementById("myInput").value;
+        var y = document.getElementById("myInput");
         for (i = 0; i < x; i++) 
-        document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
+        //document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
             for (var i = 1; i <= x; i++){
             var input = document.createElement("input");
             input.type = "text";
-            input.name = "text" + i;
-            document.getElementById("demo").appendChild(input).value;
+            input.name = "text[]";
+			input.id = "classname";
+            document.getElementById("listOfNames").appendChild(input).value;
             }
     }
 </script>
