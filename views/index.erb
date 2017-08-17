@@ -1,36 +1,30 @@
-<!DOCtype html>
-<link rel = "stylesheet" href = "css/style.css">
-<header>
-<h4>Are you ready to get coding?</h4>
-</header>
-<p>How many bright minds are in class today?</p>
+<!DOCTYPE html>
+<html>
+<body>
 
-<form method = "post" action = "names" id = "text_box">
-    <input type ="button" value="Press for boxes!" name ="classname" onclick="generate()">
-    <p id = "demo"></p>
-    <br>
-    <br>
-    <input type = "submit">
-</form></center>
+<p>Click the button to add a name.</p>
+<!-- <input type="button" name="names"><br> -->
 
+<button onclick="myFunction()">Add Name</button>
+<button onclick="discardFunction()">Discard Name</button>
+<br>
+<form method = "post" action = "/pairs" id = "myInput">
+<input type = "submit" onclick = "pairs.rb">
+
+</form>
 <script>
-    function myFunction() {
-        var x = 1 //document.getElementById("myInput").value;
-        var y = document.getElementById("myInput");
-        for (i = 0; i < x; i++) 
-        //document.getElementById("demo").innerHTML = "Enter their names in the boxes below:<br>";
-            for (var i = 1; i <= x; i++){
-            var input = document.createElement("input");
-            input.type = "text";
-            input.name = "text[]";
-			input.id = "classname";
-            document.getElementById("listOfNames").appendChild(input).value;
-            }
-    }
+function myFunction() {
+    var input = document.createElement("input");
+    input.type="text";
+    input.required=true;
+    input.name="names[]"
+    document.body.appendChild(input).value;
+ 	
+}
 </script>
 
-
-
+</body>
+</html>
 
 
 

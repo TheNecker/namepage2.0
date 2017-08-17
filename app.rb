@@ -5,8 +5,8 @@ get "/" do
 end 
 post "/pairing" do 
 	name = params[:text]
-	team = params[:team]
+	pairs = params[:pairs]
 puts "name is #{name}"
-puts "team is #{team}"
-erb :teamresults, :locals => {:team => team, :name => name}	
+puts "pairs is #{pairs}"
+erb :teamresults, :locals => {:pairs => pairs, :name => name}	
 end 
