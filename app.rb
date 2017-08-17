@@ -3,10 +3,7 @@ require_relative "pairs.rb"
 get "/" do 
 	erb :index 
 end 
-post "/pairing" do 
+post "/pairs" do 
 	name = params[:text]
-	pairs = params[:pairs]
-puts "name is #{name}"
-puts "pairs is #{pairs}"
-erb :teamresults, :locals => {:pairs => pairs, :name => name}	
+	text = params[:results]
 end 
