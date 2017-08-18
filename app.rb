@@ -6,4 +6,5 @@ end
 post "/pairs" do 
 	name = params[:text]
 	text = params[:results]
+	erb :pairs, :locals=>{:text => name}
 end 
