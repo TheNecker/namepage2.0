@@ -1,4 +1,6 @@
-<!DOCtype html>
-<link rel = "stylesheet" href = "css/style.css">
-<h3> Here is your randomly paired list:</h3><br>
-<p><input type="checkbox" value="<%names%>"></p>
+<form method = "post" action = "/firstroute">
+<%names.each do |x|%> 
+<p> <input  type="checkbox"  value="<%=x%>" name= 'names'><%=x%> </p>
+<%end%>
+<input type = "submit">
+</form>
